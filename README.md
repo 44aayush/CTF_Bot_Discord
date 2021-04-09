@@ -2,6 +2,6 @@
 
 CTF Bot using Python and Golang
 
-# [Python Bot](python-readme)
+# [Python Bot](https://github.com/44aayush/CTF_Bot_Discord/blob/main/PythonCTFBOT/Readme.md)
 
-# [Goland Bot](golang-readme)
+# [Goland Bot](https://github.com/44aayush/CTF_Bot_Discord/blob/main/GolangCTFBOT/Readme.md)
