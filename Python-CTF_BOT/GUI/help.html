@@ -7,7 +7,7 @@
     <style>
 .tab {
     display: inline-block;
-    margin-left: 930px;
+    margin-left: 900px;
 }
 </style>
     <title>Discord Bot Dashboard</title>
@@ -20,20 +20,12 @@
 <!-- the left navigation  -->
 
             <div class = 'col-2 p-2 bg-dark text-light shadow-lg' id = 'left_navigation'>
-                <img src="index.png" height="200" width="200">
+<a href='https://discord.com/'>               
+ <img src="discord.jpg" height="200" width="250" ></a>
                 
                 <p class='text-muted mt-2'><small>PES OOAD Project </small></p>
 
-<!-- key word search  -->
 
-                <div class="input-group my-4">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text bg-dark" id="basic-addon1"><i class="fas fa-search text-light"></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Keyword Search" id = 'search' autofocus>
-                </div>
-
-                <br>
 
 <!-- side bar navigation  -->
 
@@ -46,13 +38,13 @@
                             <br>
                             <ul class = 'my-2'>
                                 <li>
-                                    <a href='/' onclick="view_categories()">View Categories</a>
+                                    <a href='https://discord.com/channels/827925862472613888/827929037094912020' onclick="view_categories()">View Categories</a>
                                 </li>
                                 <li>
-                                    <a href='/' onclick="view_challenges()">View Challenges</a>
+                                    <a href='https://discord.com/channels/827925862472613888/827929037094912020' onclick="view_challenges()">View Challenges</a>
                                 </li>
                                 <li>
-                                    <a href='/' onclick="Add challenges()">Add Challenges</a>
+                                    <a href='https://discord.com/channels/827925862472613888/827929037094912020' onclick="Add challenges()">Add Challenges</a>
                                 </li>
                                 
                             </ul>
@@ -66,7 +58,7 @@
                             <br>
                             <ul class = 'my-2'>
                                 <li>
-                                    <a href='/' onclick="help()">Help Manual</a>
+                                    <a href='help.html' onclick="help()">Help Manual</a>
                                 </li>
                                 
                             </ul>
@@ -82,15 +74,17 @@
 
             <div class = 'col-10 p-2 bg-light shadow-lg float-left' id = 'work_area'>
 
-                <h1 class = 'text-center text-muted'>CTF Dashboard</h1>
+                <h1 class = 'text-center text-muted'>Help Manual</h1>
 
+                
 <!-- the top navigation -->
 
-                <div>
-                    <button type="button" id='button_issue' onclick= 'Add_challenges()' class="btn btn-primary mt-4" data-toggle="modal" data-target="#issue_reg" >Add New</button>
+                
+ <button type="button"  id='button_issue' onclick="location.href='dashboard.php';" class="btn btn-primary mt-4" data-toggle="modal" data-target="#issue_reg" float='right'>Dashboard</button>
+                
                    <span class="tab"></span>
-                   <button type="button"  id='button_issue' onclick= 'Logout()' class="btn btn-primary mt-4" data-toggle="modal" data-target="#issue_reg" float='right'>Log Out</button>
-                </div>
+                   <button type="button"  id='button_issue' onclick="location.href='login.html';" class="btn btn-primary mt-4" data-toggle="modal" data-target="#issue_reg" float='right'>Log Out</button>
+                
 
 
 <!-- start of the table display -->
@@ -99,27 +93,24 @@
                     <table class="table table-striped mt-4">
                         <thead class="thead-dark">
                         <tr>
-                            <th scope="col">S.No</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">Challenge</th>
-                            <th scope="col"># of Solves</th>
-                            <th scope="col">Author</th>
-                            <th scope="col">Points</th>
-                            <th scope="col">STATUS</th>
-                            <th scope="col">ACTION</th>
+                            <th class="text-center">Command</th>
+                            <th class="text-center">Description</th>
+                            
+                           
+                            
                         </tr>
                         </thead>
                         <tbody id = 'table'>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Cryptography</td>
-                            <td>Crack the code</td>
-                            <td>25</td>
-                            <td>Ajitesh</td>
-                            <td>100</td>
-                            <td>Active</td>
-                            <td><button class = 'btn btn-outline-primary btn-sm'>Edit</td>
-                        </tr>
+<tr><td align="center">register</td><td align="center">Register your team. Format: >>register &lt;team_name></td></tr>
+<tr><td align="center">login</td><td align="center">Login with team token. Format: >>login &lt;team_token></td></tr>
+<tr><td align="center">create-challenge</td><td align="center">Format: >>create-challenge &lt;name> &lt;category> &lt;description> &lt;files> &lt;flag></td></tr>
+<tr><td align="center">release-challenge</td><td align="center">Format: >>release-challenge &lt;challenge_id></td></tr>
+<tr><td align="center">hide-challenge</td><td align="center">Hide a challenge. Format: >>hide-challenge &lt;challenge_id></td></tr>
+<tr><td align="center">delete-challenge</td><td align="center">Format: >>delete-challenge &lt;challenge_id></td></tr>
+<tr><td align="center">submit</td><td align="center">Submit flag. Format: >>submit &lt;flag></td></tr>
+<tr><td align="center">challenges</td><td align="center">List all challenges. Format: >>challenges</td></tr>
+<tr><td align="center">challenges-info</td><td align="center">Get challenges info. Format: >>chllenges-info &lt;name></td></tr>
+<tr><td align="center">scoreboard</td><td align="center">Update scoreboard. Format: >>scoreboard</td></tr>                       
                     </table>
                 </div>
 
